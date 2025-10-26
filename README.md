@@ -21,8 +21,8 @@ Esta aplicación web está diseñada para el control operativo de un negocio y s
 
 | Rol | Usuario de Prueba | Contraseña |
 | :--- | :--- | :--- |
-| 👨‍💼 **Administrador** | `admin` | `admin123` |
-| 🧾 **Vendedor** | `vendedor` | `vendedor123` |
+| 👨‍💼 **Administrador** | `admin` | `admin` |
+| 🧾 **Vendedor** | `vendedor` | `1234` |
 
 ## 💻 Tecnologías Utilizadas
 

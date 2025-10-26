@@ -1,0 +1,118 @@
+:root {
+    --bg: #F4E9CD;
+    --dark: #031926;
+    --teal: #468189;
+    --mint: #77ACA2;
+    --white: #ffffff;
+}
+
+/* ======== Base ======== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ======== Contenedor ======== */
+.vendedor-container {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 420px;
+}
+
+header h1 {
+    color: var(--dark);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+/* ======== Bienvenida ======== */
+.welcome-box h2 {
+    font-size: 1.4rem;
+    color: var(--teal);
+    margin-bottom: 10px;
+}
+
+.welcome-box span {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.role {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* ======== Botones ======== */
+.acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-action {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Botón principal */
+.btn-action.primary {
+    background-color: var(--dark);
+    color: var(--bg);
+}
+.btn-action.primary:hover {
+    background-color: var(--teal);
+    color: var(--white);
+}
+
+/* Botón secundario */
+.btn-action.secondary {
+    background-color: var(--teal);
+    color: var(--bg);
+}
+.btn-action.secondary:hover {
+    background-color: var(--mint);
+    color: var(--dark);
+}
+
+/* Cerrar sesión */
+.btn-action.logout {
+    background-color: #d9534f;
+    color: var(--white);
+}
+.btn-action.logout:hover {
+    background-color: #c9302c;
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 480px) {
+    .vendedor-container {
+        width: 90%;
+        padding: 30px 25px;
+    }
+
+    .btn-action {
+        font-size: 0.95rem;
+        padding: 10px;
+    }
+}

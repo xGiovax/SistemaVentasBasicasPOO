@@ -1,0 +1,169 @@
+:root {
+    --bg: #f6f0e2;
+    --dark: #031926;
+    --teal: #468189;
+    --mint: #77ACA2;
+    --opal: #9DBEBB;
+    --white: #ffffff;
+}
+
+/* ======== Base ======== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ======== Tarjeta ======== */
+.form-card {
+    width: 95%;
+    max-width: 900px;
+    background-color: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+/* ======== Encabezado ======== */
+.form-header {
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 25px 30px;
+    text-align: center;
+}
+
+.form-header h2 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.form-header p {
+    margin: 8px 0 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ======== Cuerpo ======== */
+.form-body {
+    display: flex;
+    gap: 40px;
+    padding: 35px 45px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-column {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: var(--dark);
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* ======== Inputs ======== */
+.input-box {
+    display: flex;
+    align-items: center;
+    background-color: #fdfdfd;
+    border: 1.5px solid var(--opal);
+    border-radius: 10px;
+    padding: 8px 12px;
+    transition: 0.3s ease;
+}
+
+.input-box span {
+    margin-right: 10px;
+    font-size: 1.1rem;
+    opacity: 0.7;
+}
+
+.input-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 8px;
+    font-family: inherit;
+}
+
+.input-box:focus-within {
+    border-color: var(--mint);
+    box-shadow: 0 0 0 4px rgba(119, 172, 162, 0.15);
+}
+
+/* ======== Botones ======== */
+.form-actions {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.btn-primary,
+.btn-secondary {
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.btn-primary {
+    background-color: var(--dark);
+    color: var(--bg);
+}
+
+.btn-primary:hover {
+    background-color: var(--teal);
+    color: var(--white);
+}
+
+.btn-secondary {
+    background-color: var(--teal);
+    color: var(--bg);
+}
+
+.btn-secondary:hover {
+    background-color: var(--mint);
+    color: var(--dark);
+}
+
+/* ======== Animación ======== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 700px) {
+    .form-body {
+        flex-direction: column;
+        padding: 25px 20px;
+    }
+
+    .form-column {
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}

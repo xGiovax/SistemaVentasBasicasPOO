@@ -1,0 +1,168 @@
+:root {
+    --bg: #f6f0e2;
+    --dark: #031926;
+    --teal: #468189;
+    --mint: #77ACA2;
+    --opal: #9DBEBB;
+    --white: #ffffff;
+}
+
+/* ======== Base ======== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #1f1f1f;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background: var(--white);
+    padding: 35px 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* ======== Header ======== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+header h2 {
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/* ======== Botones ======== */
+.btn-primary,
+.btn-secondary,
+.btn-edit,
+.btn-delete {
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: var(--dark);
+    color: var(--bg);
+}
+.btn-primary:hover {
+    background-color: var(--teal);
+}
+
+.btn-secondary {
+    background-color: var(--teal);
+    color: var(--bg);
+}
+.btn-secondary:hover {
+    background-color: var(--mint);
+    color: var(--dark);
+}
+
+.btn-edit {
+    background-color: var(--teal);
+    color: var(--bg);
+}
+.btn-edit:hover {
+    background-color: var(--mint);
+    color: var(--dark);
+}
+
+.btn-delete {
+    background-color: #d9534f;
+    color: #fff;
+}
+.btn-delete:hover {
+    background-color: #b52a27;
+}
+
+/* ======== Tabla ======== */
+.table-section {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--dark);
+    color: var(--bg);
+}
+
+thead th {
+    padding: 12px 10px;
+    text-align: left;
+    font-weight: 500;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--opal);
+    transition: 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+tbody tr:hover {
+    background-color: var(--mint);
+    color: var(--dark);
+}
+
+tbody td {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+}
+
+.acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+/* ======== Footer ======== */
+footer {
+    margin-top: 30px;
+    text-align: right;
+}
+
+/* ======== Responsivo ======== */
+@media (max-width: 800px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    .acciones {
+        flex-direction: column;
+    }
+}
